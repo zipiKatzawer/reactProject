@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
@@ -41,9 +42,14 @@ const ShowService=observer(()=>
                 }
                 title={x.name}
               />
-
+     <CardMedia
+        component="img"
+        height="194"
+        image="https://yt3.googleusercontent.com/ytc/AIf8zZQ842DVfOkot2BlLE2u8HQUCHMctxzcZIWbT05t=s900-c-k-c0x00ffffff-no-rj"
+        alt="Paella dish"
+      />
               <CardContent>
-                <Typography paragraph>Description meeting: {x.description}</Typography>
+                <Typography paragraph>Description: {x.description}</Typography>
               </CardContent>
 
               <CardActions disableSpacing>

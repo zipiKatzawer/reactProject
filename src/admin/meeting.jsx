@@ -1,5 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -35,8 +36,9 @@ const Meeting = observer(() => {
       <Grid container spacing={2}>
         {sortedList.map((meeting) => (
           <Grid item key={meeting.id} xs={12} sm={6} md={4} lg={3}>
-            <Card sx={{ minWidth: 275, borderColor: getColor(meeting.dateTime), borderWidth: 2, borderStyle: 'solid' }}>
+            <Card id="card" sx={{ minWidth: 275, borderColor: getColor(meeting.dateTime), borderWidth: 2, borderStyle: 'solid' }}>
               <CardContent>
+              <ThumbUpOffAltIcon sx={{ color: getColor(meeting.dateTime),marginRight:30 }} />
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                   serviceType: {meeting.serviceType}
                 </Typography>
@@ -62,4 +64,3 @@ const Meeting = observer(() => {
 });
 
 export default Meeting;
-

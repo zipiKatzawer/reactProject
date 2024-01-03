@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import SingleMeeting from "./singleMeeting";
 import BusinessDetails from "../admin/businessDetails";
 import ShowService from "../admin/showService";
+import MyAppBar from "./basePage";
 const Home=observer(()=>{
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -15,6 +16,8 @@ const Home=observer(()=>{
   };
 
     return(<div >
+      <MyAppBar/>
+      <br />
       <Button className="buttonLogin" variant="outlined" onClick={() => { navigate("/admin") }}
        style={{ position: 'absolute', top: 10, left: 10, padding: '10px' }}>
             Login as admin</Button>

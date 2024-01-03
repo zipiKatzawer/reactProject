@@ -9,6 +9,7 @@ import Alert from '@mui/material/Alert';
 
 import AdminBusiness from './adminBusiness';
 import globalState from '../dataStore/globalState';
+import MyAppBar from '../user/basePage';
 export default function Login()
 {
     const [userName,setUserName]=useState('admin');
@@ -40,7 +41,9 @@ export default function Login()
         });
         
     };
-    return(<>{showComponent ? <AdminBusiness/>:
+    return(<><MyAppBar/>
+    <br />
+    {showComponent ? <AdminBusiness/>:
     <form onSubmit={handleSubmit}>
 
         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
